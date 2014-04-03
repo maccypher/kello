@@ -7,20 +7,21 @@
 		<script src="js/angular.min.js"></script>
 		<script src="js/angular-round-progress-directive.js"></script>
 		<script src="js/controller.js"></script>
+		<link rel="shortcut icon" href="img/icon-32-alt.png">
 	</head>
 	<body ng-controller="MainCtrl">
-		<div id="configs" ng-class="{ 'slideUp': running, 'slideDown': !running }">
-			<input class="enterMinutes" type="number" ng-model="initValue" ng-disabled="running" contenteditable />
+		<div class="fade" id="configs" ng-class="{ 'slideUp': running, 'slideDown': !running }">
+			<input class="enterMinutes fade" type="number" ng-model="initValue" ng-disabled="running" contenteditable />
 			<div id="radios">
-				<input type="radio" id="unitSeconds" name="units" ng-model="timeUnit" value="useSeconds" ng-checked="timeUnit == 'useSeconds'" /><label for="unitSeconds" ng-class="{ 'disabled': timeUnit == 'useMinutes' }"><i class="icon-ok"></i> Seconds</label>
-				<input type="radio" id="unitMinutes" name="units" ng-model="timeUnit" value="useMinutes" ng-checked="timeUnit == 'useMinutes'" /><label for="unitMinutes" ng-class="{ 'disabled': timeUnit == 'useSeconds' }"><i class="icon-ok"></i> Minutes</label>
+				<input type="radio" id="unitSeconds" name="units" ng-model="timeUnit" value="useSeconds" ng-checked="timeUnit == 'useSeconds'" /><label class="fade" for="unitSeconds" ng-class="{ 'disabled': timeUnit == 'useMinutes' }"><i class="icon-ok"></i> Seconds</label>
+				<input type="radio" id="unitMinutes" name="units" ng-model="timeUnit" value="useMinutes" ng-checked="timeUnit == 'useMinutes'" /><label class="fade" for="unitMinutes" ng-class="{ 'disabled': timeUnit == 'useSeconds' }"><i class="icon-ok"></i> Minutes</label>
 			</div>
 			<div id="soundSettings">
 				<audio id="timesUpSound" class="hide">
 					<source src="audio/bell2.ogg" type="audio/ogg">
 					<source src="audio/bell2.mp3" type="audio/mpeg">
 				</audio>
-				<input type="checkbox" id="checkToPlay" ng-model="checkToPlay" ng-init="checkToPlay=true" class="hide" /><label for="checkToPlay" ng-class="{ 'disabled': !checkToPlay }"><i class="icon-music"></i> Play sound when time's up</label>
+				<input type="checkbox" id="checkToPlay" ng-model="checkToPlay" ng-init="checkToPlay=true" class="hide" /><label class="fade" for="checkToPlay" ng-class="{ 'disabled': !checkToPlay }"><i class="icon-music"></i> Play sound when time's up</label>
 			</div>
 		</div>
 		<div id="wrapper">
@@ -39,12 +40,12 @@
 															data-round-progress-outer-circle-foreground-color="#46ded5"
 															data-round-progress-inner-circle-color="#1a1a1a"
 															data-round-progress-label-color="#1d242c"></div>
-			<div id="counterLabel" ng-class="{ 'show': !timesUp, 'hide': timesUp }">{{currentValue}}</div>
+			<div class="fade" id="counterLabel" ng-class="{ 'show': !timesUp, 'hide': timesUp }">{{currentValue}}</div>
 			<br />
-			<div id="timesUp" ng-class="{ 'show': timesUp, 'hide': !timesUp || running }">Time's Up!</div>
+			<div class="fade" id="timesUp" ng-class="{ 'show': timesUp, 'hide': !timesUp || running }">Time's Up!</div>
 			<div id="controls">
-				<a class="startBtn" ng-click="start()" ng-class="{ 'disabled': running }">Start</a>
-				<a class="stopBtn" ng-click="stop()" ng-class="{ 'disabled': !running }">Stop</a>
+				<a class="startBtn fade" ng-click="start()" ng-class="{ 'disabled': running }">Start</a>
+				<a class="stopBtn fade" ng-click="stop()" ng-class="{ 'disabled': !running }">Stop</a>
 			</div>
 		</div>
 	</body>
