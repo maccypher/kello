@@ -6,8 +6,19 @@ app.controller('MainCtrl', function($scope, $interval) {
 	$scope.initValue = 25;
 	$scope.currentValue = $scope.initValue;
 	$scope.currentCounter = null;
-	$scope.delay = 1000*60;	// Minutes
-	// $scope.delay = 1000;		// Seconds
+	$scope.minutes = 1000*60;
+	$scope.seconds = 1000;
+	$scope.timeUnit = "useMinutes";
+	
+	$scope.$watch('timeUnit', function(){
+		if($scope.timeUnit == "useMinutes"){
+			$scope.delay = $scope.minutes;
+		}
+		if($scope.timeUnit == "useSeconds"){
+			$scope.delay = $scope.seconds;
+		}
+	});
+	
 	
 	$scope.playSound = function() { 
 		var audio = document.getElementById("timesUpSound");

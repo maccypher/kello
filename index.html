@@ -9,8 +9,12 @@
 		<script src="controller.js"></script>
 	</head>
 	<body ng-controller="MainCtrl">
-		<div id="wrapper">
+		<div id="configs" ng-class="{ 'slideUp': running, 'slideDown': !running }">
 			<input class="enterMinutes" type="number" ng-model="initValue" ng-disabled="running" />
+			<input type="radio" id="unitSeconds" name="units" ng-model="timeUnit" value="useSeconds" ng-checked="timeUnit == 'useSeconds'" /><label ng-class="{ 'disabled': timeUnit == 'useMinutes' }" for="unitSeconds">Seconds</label>
+			<input type="radio" id="unitMinutes" name="units" ng-model="timeUnit" value="useMinutes" ng-checked="timeUnit == 'useMinutes'" /><label ng-class="{ 'disabled': timeUnit == 'useSeconds' }" for="unitMinutes">Minutes</label>
+		</div>
+		<div id="wrapper">
 			<br />
 			<div ang:round:progress data-round-progress-model="roundProgressData"
 															data-round-progress-width="340"
