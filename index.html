@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="angularjs-starter">
+	<head>
+		<title>Kello - Pomodoro</title>
+		<link href='http://fonts.googleapis.com/css?family=Advent+Pro:100,300,400' rel='stylesheet' type='text/css'>
+		<link href="kello.css" rel="stylesheet" />
+		<script src="angular.min.js"></script>
+		<script src="angular-round-progress-directive.js"></script>
+		<script src="controller.js"></script>
+	</head>
+	<body ng-controller="MainCtrl">
+		<div id="wrapper">
+			<input class="enterMinutes" type="number" ng-model="initValue" ng-disabled="running" />
+			<br />
+			<div ang:round:progress data-round-progress-model="roundProgressData"
+															data-round-progress-width="340"
+															data-round-progress-height="340"
+															data-round-progress-outer-shadow-blur="10"
+															data-round-progress-outer-circle-width="3"
+															data-round-progress-inner-circle-width="3"
+															data-round-progress-outer-circle-radius="160"
+															data-round-progress-inner-circle-radius="160"
+															data-round-progress-label-font="1pt Arial"
+															data-round-progress-outer-shadow-color="#46ded5"
+															data-round-progress-outer-circle-background-color="#1a1a1a"
+															data-round-progress-outer-circle-foreground-color="#46ded5"
+															data-round-progress-inner-circle-color="#1a1a1a"
+															data-round-progress-label-color="#1d242c"></div>
+			<div id="counterLabel" ng-class="{ 'show': !timesUp, 'hide': timesUp }">{{currentValue}}</div>
+			<br />
+			<div id="timesUp" ng-class="{ 'show': timesUp, 'hide': !timesUp || running }">Time's Up!</div>
+			<div id="controls">
+				<a class="startBtn" ng-click="start()" ng-class="{ 'disabled': running }">Start Timer</a>
+				<a class="stopBtn" ng-click="stop()" ng-class="{ 'disabled': !running }">Stop Timer</a>
+			</div>
+
+			<audio id="timesUpSound">
+				<source src="bell2.ogg" type="audio/ogg">
+				<source src="bell2.mp3" type="audio/mpeg">
+			</audio>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,136 @@
+@import url(http://fonts.googleapis.com/css?family=Advent+Pro:400,300,100);
+
+html, body {
+	width: 100%;
+	height: 100%;
+}
+body {
+	font-family: "Advent Pro", Helvetica, Arial, sans-serif;
+	font-weight: 100;
+	font-size: 40px;
+	margin: 0;
+	padding: 0;
+	background-color: #1d242c;
+	color: #46ded5;
+	text-shadow: 0 0 10px #46ded5;
+}
+a {
+	cursor: pointer;
+	display: inline-block;
+	width: 170px;
+	height: 80px;
+	color: #46ded5;
+	text-shadow: 0 0 5px #46ded5;
+	text-decoration: none;
+	white-space: nowrap;
+
+	-webkit-transition: 200ms all ease-out;
+	-moz-transition: 200ms all ease-out;
+	-o-transition: 200ms all ease-out;
+	-ms-transition: 200ms all ease-out;
+	transition: 200ms all ease-out;
+}
+a:hover {
+	color: #46ded5;
+	text-shadow: 0 0 5px #46ded5, 0 0 10px #46ded5;
+
+	-webkit-transition: 200ms all ease-out;
+	-moz-transition: 200ms all ease-out;
+	-o-transition: 200ms all ease-out;
+	-ms-transition: 200ms all ease-out;
+	transition: 200ms all ease-out;
+}
+a.disabled {
+	cursor: default;
+	color: rgba(77,222,213,0.2);
+	text-shadow: none;
+}
+.startBtn {
+	text-align: left;
+	margin-right: 10px;
+}
+.stopBtn {
+	text-align: right;
+	margin-left: 15px;
+}
+#controls {
+	position: absolute;
+	bottom: 5%;
+	width: 380px;
+	margin-left: -30px;
+}
+canvas {
+	margin-top: -140px;
+	margin-left: -10px;
+	position: absolute;
+	top: 45%;
+}
+#counterLabel {
+	font-size: 200px;
+	position: absolute;
+	top: 45%;
+	margin-top: -90px;
+	width: 320px;
+	text-align: center;
+}
+#wrapper {
+	width: 320px;
+	height: 100%;
+	margin: 0 auto;
+}
+.enterMinutes {
+	width: 320px;
+	height: 30px;
+	margin: 20% 0;
+	padding: 5px 10px;
+	background-color: rgba(0,0,0,0.1);
+	border: none;
+	outline: none;
+	color: #46ded5;
+	color: rgba(70,222,213,0.4);
+	font-family: "Advent Pro", Helvetica, Arial, sans-serif;
+	font-weight: 100;
+	font-size: 24px;
+	text-align: center;
+}
+::-webkit-textarea-placeholder {
+	color: rgba(70,222,213,0.1);
+	font-weight: 100;
+}
+::-webkit-input-placeholder {
+	color: rgba(70,222,213,0.1);
+	font-weight: 100;
+}
+
+:-moz-placeholder {
+	/* Firefox 18-*/
+	color: rgba(70,222,213,0.1);
+	font-weight: 100;
+}
+::-moz-placeholder {
+	/* Firefox 19+ */
+	color: rgba(70,222,213,0.1);
+	font-weight: 100;
+}
+
+:-ms-textarea-placeholder {
+	color: rgba(70,222,213,0.1);
+	font-weight: 100;
+}
+:-ms-input-placeholder {
+	color: rgba(70,222,213,0.1);
+	font-weight: 100;
+}
+#timesUp {
+	position: absolute;
+	top: 45%;
+	width: 320px;
+	font-size: 80px;
+	text-align: center;
+}
+.hide {
+	display: none;
+}
+.show {
+	display: block;
+}
