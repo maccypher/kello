@@ -46,8 +46,9 @@ app.controller('MainCtrl', function($scope, $interval) {
 			$scope.currentValue--;
 			setProgress(Math.ceil($scope.currentValue), ((100 / $scope.initValue) * $scope.currentValue) / 100);
 		} else {
-			//$scope.stop();
-			$scope.playSound();
+			if($scope.checkToPlay){
+				$scope.playSound();
+			}
 			$scope.timesUp = true;
 			$scope.running = false;
 			$interval.cancel($scope.currentCounter);
