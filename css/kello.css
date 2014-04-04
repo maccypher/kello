@@ -37,10 +37,12 @@ a.disabled {
 .startBtn {
 	text-align: left;
 	margin-right: 10px;
+	text-transform: uppercase;
 }
 .stopBtn {
 	text-align: right;
 	margin-left: 15px;
+	text-transform: uppercase;
 }
 #controls {
 	position: absolute;
