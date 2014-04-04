@@ -1,4 +1,8 @@
 # Kello
+
+![Smaller icon](img/icon-128.gif "Kello") 
+
+
 Is a web based timer app for "pomodoro" working technique.
 
 The used directive based on "angular-round-progress-directive".
