@@ -1,6 +1,6 @@
 # Kello
 
-![Smaller icon](img/icon-128.gif "Kello") 
+![Smaller icon](img/icon-128.png "Kello") 
 
 
 Is a web based timer app for "pomodoro" working technique.

@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "Kello",
+  "description": "A pomodore web app",
+  "version": "1.0",
+  "app": {
+    "launch": {
+      "local_path": "index.html"
+    }
+  },
+  "icons": {
+    "16": "img/icon-16.png",
+    "48": "img/icon-48.png",
+    "128": "img/icon-128.png"
+  },
+  "content_scripts": [
+    {
+        "matches": ["http://*/*", "https://*/*"],
+        "js": ["js/angular.min.js","js/angular-round-progress-directive.js","js/controller.js"]
+    }
+]
+}
