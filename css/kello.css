@@ -76,8 +76,13 @@ canvas {
 	background-color: rgba(0,0,0,0.1);
 	box-shadow: 0 2px 10px rgba(0,0,0,0.5)
 }
+	@media (max-width: 900px) {
+		#configs {
+			height: 160px;
+		}
+	}
 .slideUp {
-	top: -120px;
+	top: -170px;
 }
 .slideDown {
 	top: 0;
@@ -99,6 +104,17 @@ canvas {
 	float: left;
 	margin: 20px 0 0 5%;
 }
+	@media (max-width: 900px) {
+		#radios {
+			display: inline-block;
+			float: none;
+			position: absolute;
+			top: 0;
+			left: 50%;
+			margin-top: 0;
+			margin-left: -140px;
+		}
+	}
 #radios label {
 	margin-right: 40px;
 }
@@ -107,6 +123,16 @@ canvas {
 	float: right;
 	margin: 20px 5% 0 0;
 }
+	@media (max-width: 900px) {
+		#soundSettings {
+			display: inline-block;
+			float: none;
+			position: absolute;
+			top: 80px;
+			left: 50%;
+			margin-left: -160px
+		}
+	}
 .enterMinutes {
 	position: absolute;
 	left: 50%;
@@ -125,6 +151,20 @@ canvas {
 	font-size: 24px;
 	text-align: center;
 }
+	@media (max-width: 1024px) {
+		.enterMinutes {
+			width: 200px;
+			margin: 30px 0 0 -110px;
+		}
+	}
+	@media (max-width: 900px) {
+		.enterMinutes {
+			display: inline-block;
+			width: 320px;
+			margin: 30px 0 0 -170px;
+			top: 30px;
+		}
+	}
 input.enterMinutes:focus {
 	box-shadow: 0 0 5px #46ded5, 0 0 10px #46ded5;
 }
